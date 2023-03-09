@@ -1,0 +1,23 @@
+.container {
+    text-align: center;
+    padding: 100px;
+    width: 100%;
+}
+
+.add-area {
+    margin: 45px;
+}
+
+.child-add-area {
+    display: inline;
+    vertical-align: middle;
+}
+
+#todoInput::placeholder {
+    text-align: center;
+}
+
+.todo-table {
+    width: 60%;
+    margin: 0 auto;
+}
