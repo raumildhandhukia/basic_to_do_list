@@ -27,8 +27,26 @@ addButton.addEventListener('click', function () {
     });
     deleteCell.appendChild(deleteButton);
 
+    const doneCell = document.createElement('td');
+    const doneButton = document.createElement('button');
+    doneButton.textContent = 'Done';
+    doneButton.className = 'btn btn-primary btn-sm';
+    doneButton.style.display = 'inline-block';
+    doneButton.addEventListener('click', function () {
+        if (doneButton.textContent == 'Done') {
+            detailCell.style.textDecoration = 'line-through';
+            doneButton.textContent = 'Un-Done';
+        } else {
+            detailCell.style.textDecoration = 'none';
+            doneButton.textContent = 'Done';
+        }
+    });
+    doneCell.appendChild(doneButton);
+
+
     newRow.appendChild(detailCell);
     newRow.appendChild(timeCell);
+    newRow.appendChild(doneCell);
     newRow.appendChild(deleteCell);
 
     tableBody.appendChild(newRow);
